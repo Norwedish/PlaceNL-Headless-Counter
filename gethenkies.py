@@ -37,17 +37,17 @@ def main():
 
             total_headless_henk = get_total_headless_henk_versions(data)
             henk_change = "up" if total_headless_henk > prev_henkies_calc else "down"
-            if total_headless_henk == previous_henkies_count[0]:
+            if total_headless_henk == prev_henkies_calc:
                 henk_change = "same"
 
             total_userscripts = get_total_userscripts(data)
             userscript_change = "up" if total_userscripts > prev_userscript_calc else "down"
-            if total_userscripts == previous_userscript_count[0]:
+            if total_userscripts == prev_userscript_calc:
                 userscript_change = "same"
 
             difference = (abs(total_headless_henk - total_userscripts))
             difference_change = "up" if difference > prev_diff_calc else "down"
-            if difference == previous_difference_count[0]:
+            if difference == prev_diff_calc:
                 difference_change = "same"
 
 
